@@ -1,27 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pase y vea - Producto</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pase y vea — Foto</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
+<body class="light">
 
 <header class="foto-header">
-  <a href="index.html" class="back">← Volver</a>
-  <h2>Pase y vea</h2>
+  <a class="back" href="index.html">← Volver</a>
+  <img src="assets/logo/logo-pase-y-vea.png" alt="logo" class="logo-mini">
 </header>
 
-<section class="foto-full">
-  <img src="img/producto1.jpg" />
-</section>
+<main class="foto-page">
+  <figure class="foto-figure">
+    <img id="fotoFull" src="assets/img/producto-01.jpg" alt="Producto">
+  </figure>
 
-<section class="foto-desc">
-  <p><strong>1,234 likes</strong></p>
-  <p>Campera oversize — Disponible en talles S, M, L. Alta calidad y terminación premium.</p>
-</section>
+  <section class="foto-details">
+    <p class="likes"><strong>1,234 likes</strong></p>
+    <p class="descripcion">Campera oversize — Disponible en talles S, M, L. Alta calidad y terminación premium.</p>
+  </section>
+</main>
 
+<nav class="bottom-nav" id="bottomNav2">
+  <button class="nav-btn"><img src="assets/icons/icon-home.svg" alt="Home"></button>
+  <button class="nav-btn"><img src="assets/icons/icon-search.svg" alt="Buscar"></button>
+  <button class="nav-btn"><img src="assets/icons/icon-fav.svg" alt="Favoritos"></button>
+  <button class="nav-btn"><img src="assets/icons/icon-profile.svg" alt="Perfil"></button>
+</nav>
+
+<script src="script.js"></script>
 </body>
 </html>
