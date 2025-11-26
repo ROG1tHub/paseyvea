@@ -1,223 +1,173 @@
-:root{
-  --bg:#ffffff;
-  --fg:#0b0b0b;
-  --muted:#666666;
-  --accent:#000000;
-  --nav-bg:#ffffff;
-  --card-bg: #fafafa;
-  --glass: rgba(255,255,255,0.6);
-}
-body.dark{
-  --bg:#0b0b0b;
-  --fg:#f5f5f5;
-  --muted:#bfbfbf;
-  --accent:#ffffff;
-  --nav-bg:#111111;
-  --card-bg: #0c0c0c;
-  --glass: rgba(0,0,0,0.4);
+/* ------------------------------
+   RESET BÁSICO
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
-  background: linear-gradient(180deg,var(--bg),var(--bg));
-  color:var(--fg);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  min-height:100vh;
+body {
+    background: #ffffff;
+    color: #111;
 }
 
-/* Container */
-.app{
-  max-width:920px;
-  margin:0 auto;
-  padding-bottom:92px; /* espacio para bottom nav */
-  transition:background .25s ease,color .25s ease;
+/* ------------------------------
+   CONTENEDOR PRINCIPAL
+--------------------------------*/
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 80px; /* espacio para navbar inferior */
 }
 
-/* Header perfil */
-.perfil-header{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:18px;
-  position:relative;
-}
-.logo{
-  width:72px;
-  height:auto;
-  display:block;
-  border-radius:8px;
-  background:var(--card-bg);
-  padding:6px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.04);
-}
-.brand{
-  font-size:22px;
-  margin:0;
-  font-weight:600;
-  letter-spacing:0.2px;
-  color:var(--fg);
-  flex:1;
-}
-.theme-toggle{
-  background:transparent;
-  border:0;
-  font-size:20px;
-  cursor:pointer;
-  padding:6px 10px;
-  border-radius:8px;
-  transition:transform .15s ease, background .2s ease;
-}
-.theme-toggle:active{ transform:scale(.98) }
-
-/* Perfil info */
-.perfil-info{
-  text-align:center;
-  padding:6px 18px 18px;
-  color:var(--muted);
-}
-.perfil-info .negocio{ font-weight:600; color:var(--fg) }
-.sitio{ color:var(--accent); text-decoration:none; font-weight:600 }
-
-/* Stories */
-.stories{
-  display:flex;
-  gap:14px;
-  padding:12px 18px;
-  overflow:auto;
-  -webkit-overflow-scrolling:touch;
-}
-.story{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  min-width:64px;
-  transition:transform .25s ease;
-}
-.story:hover{ transform:translateY(-6px) }
-.story img{
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid var(--accent);
-  box-shadow:0 6px 18px rgba(0,0,0,0.06);
-}
-.story p{
-  font-size:13px;
-  color:var(--muted);
-  margin-top:8px;
+/* ------------------------------
+   HEADER
+--------------------------------*/
+.header {
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
-/* Galería */
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  padding:12px;
-}
-.galeria .card{
-  display:block;
-  position:relative;
-  overflow:hidden;
-  border-radius:8px;
-  background:var(--card-bg);
-  transition:transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .25s ease;
-  box-shadow:0 6px 18px rgba(0,0,0,0.04);
-}
-.galeria .card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  display:block;
-  transition:transform .4s ease;
-}
-.galeria .card:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.12);}
-.galeria .card:hover img{ transform:scale(1.06); }
-.meta{
-  padding:10px;
-  font-size:13px;
-  color:var(--muted);
+.header img {
+    height: 35px;
+    object-fit: contain;
 }
 
-/* Foto individual */
-.foto-header{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:12px;
-  border-bottom:1px solid rgba(0,0,0,0.06);
-  background:linear-gradient(180deg,transparent,transparent);
-}
-.logo-small{ width:48px; height:auto }
-.back{ text-decoration:none; color:var(--fg); font-weight:700; font-size:16px }
-
-.foto-full img{ width:100%; display:block }
-.foto-desc{ padding:14px; color:var(--muted) }
-.likes{ font-weight:700; color:var(--fg) }
-
-/* Bottom nav (mobile) */
-.bottom-nav{
-  position:fixed;
-  left:0;
-  right:0;
-  bottom:0;
-  height:72px;
-  background:var(--nav-bg);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:6px;
-  border-top:1px solid rgba(0,0,0,0.06);
-  z-index:999;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-.bottom-nav .nav-btn{
-  background:transparent;
-  border:0;
-  padding:6px 14px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  color:var(--muted);
-  font-size:11px;
-  cursor:pointer;
-  border-radius:10px;
-  transition:background .18s ease, color .18s ease, transform .12s ease;
-}
-.bottom-nav .nav-btn:hover{ transform:translateY(-4px) }
-.bottom-nav .nav-btn img{ width:22px; height:22px; margin-bottom:4px; display:block; filter:none; opacity:0.95 }
-.bottom-nav .nav-btn.active{ color:var(--fg); font-weight:700 }
-
-/* Desktop: hide bottom nav and reveal side spacing */
-@media (min-width:720px){
-  .app{ padding-top:20px }
-  .galeria .card img{ height:220px }
-  .bottom-nav{ display:none }
-  .app{ padding-bottom:40px }
-  .perfil-header{ padding:28px 36px }
-  .stories{ padding:18px 36px }
-  .galeria{ padding:18px 36px; gap:12px }
+/* ------------------------------
+   GRID DE FOTOS
+--------------------------------*/
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
 }
 
-/* Tiny screens */
-@media (max-width:360px){
-  .brand{ font-size:20px }
-  .logo{ width:60px }
-  .story img{ width:56px; height:56px }
-  .galeria .card img{ height:110px }
+.grid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
-/* Accessibility focus */
-button:focus, a:focus { outline: 3px solid rgba(100,150,255,0.12); outline-offset:2px; }
+.grid img:hover {
+    transform: scale(1.03);
+}
 
-/* Animations */
-@keyframes subtlePulse {
-  0%{ transform:scale(1) }
-  50%{ transform:scale(1.01) }
-  100%{ transform:scale(1) }
+/* ------------------------------
+   PÁGINA DE DETALLE DE FOTO
+--------------------------------*/
+.foto-container {
+    width: 100%;
+    background: #fff;
+}
+
+.foto-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.foto-info {
+    padding: 15px;
+}
+
+.foto-info h2 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.foto-info p {
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+/* ------------------------------
+   NAVBAR INFERIOR TIPO APP
+--------------------------------*/
+.nav-bottom {
+    width: 100%;
+    height: 65px;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 100;
+}
+
+.nav-bottom img {
+    width: 26px;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-bottom img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ------------------------------
+   MODO OSCURO
+--------------------------------*/
+.dark-mode body {
+    background: #000;
+    color: #fff;
+}
+
+.dark-mode .header {
+    background: #000;
+    border-bottom-color: #333;
+}
+
+.dark-mode .nav-bottom {
+    background: #000;
+    border-top-color: #333;
+}
+
+.dark-mode .grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ------------------------------
+   ANIMACIONES
+--------------------------------*/
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------
+   RESPONSIVE
+--------------------------------*/
+@media (max-width: 480px) {
+    .header img {
+        height: 30px;
+    }
+
+    .nav-bottom img {
+        width: 22px;
+    }
 }
