@@ -1,59 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Pase y vea — Inicio</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pase y vea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
 </head>
-<body class="light">
+<body>
 
-<!-- HEADER / LOGO -->
 <header class="header">
-  <div class="header-inner">
-    <img src="assets/logo/logo-pase-y-vea.png" alt="Pase y vea" class="logo" id="logo-top">
-    <button class="dark-toggle" id="darkToggle" aria-label="Cambiar modo">
-      ☾
-    </button>
-  </div>
-  <div class="profile-info">
-    <p class="business">Local Business — Closet Space</p>
-    <a class="website" href="#">www.closetspace.com</a>
-  </div>
+    <img src="assets/logo/logo_principal.png" class="logo" alt="Pase y vea logo">
 </header>
 
-<!-- STORIES -->
-<section class="stories">
-  <div class="story"><img src="assets/img/producto-01.jpg" alt=""><p>mujer</p></div>
-  <div class="story"><img src="assets/img/producto-02.jpg" alt=""><p>hombre</p></div>
-  <div class="story"><img src="assets/img/producto-03.jpg" alt=""><p>unisex</p></div>
-  <div class="story"><img src="assets/img/producto-04.jpg" alt=""><p>hogar</p></div>
+<section class="categories">
+    <button>Mujer</button>
+    <button>Hombre</button>
+    <button>Unisex</button>
+    <button>Hogar</button>
 </section>
 
-<!-- GALLERY -->
-<main class="gallery" id="gallery">
-  <a class="card" href="foto.html?img=producto-01.jpg"><img src="assets/img/producto-01.jpg" alt="Producto 1"><div class="meta">Campera oversize</div></a>
-  <a class="card" href="foto.html?img=producto-02.jpg"><img src="assets/img/producto-02.jpg" alt="Producto 2"><div class="meta">Buzo navy</div></a>
-  <a class="card" href="foto.html?img=producto-03.jpg"><img src="assets/img/producto-03.jpg" alt="Producto 3"><div class="meta">Abrigo teddy</div></a>
-  <a class="card" href="foto.html?img=producto-04.jpg"><img src="assets/img/producto-04.jpg" alt="Producto 4"><div class="meta">Dormitorio</div></a>
-  <a class="card" href="foto.html?img=producto-01.jpg"><img src="assets/img/producto-01.jpg" alt="Producto 1"><div class="meta">Campera oversize</div></a>
-  <a class="card" href="foto.html?img=producto-03.jpg"><img src="assets/img/producto-03.jpg" alt="Producto 3"><div class="meta">Abrigo teddy</div></a>
-</main>
+<section class="grid">
+    <a href="product.html"><img src="assets/productos/producto1.jpg"></a>
+    <a href="product.html"><img src="assets/productos/producto2.jpg"></a>
+    <a href="product.html"><img src="assets/productos/producto3.jpg"></a>
+    <a href="product.html"><img src="assets/productos/producto4.jpg"></a>
+    <a href="product.html"><img src="assets/productos/producto5.jpg"></a>
+    <a href="product.html"><img src="assets/productos/producto6.jpg"></a>
+</section>
 
-<!-- BOTTOM NAV -->
-<nav class="bottom-nav" id="bottomNav">
-  <button class="nav-btn active" data-target="home">
-    <img src="assets/icons/icon-home.svg" data-src-bw="assets/icons/icon-home.svg" data-src-white="assets/icons/icon-home-white.svg" alt="Home">
-  </button>
-  <button class="nav-btn" data-target="search">
-    <img src="assets/icons/icon-search.svg" data-src-bw="assets/icons/icon-search.svg" data-src-white="assets/icons/icon-search-white.svg" alt="Buscar">
-  </button>
-  <button class="nav-btn" data-target="fav">
-    <img src="assets/icons/icon-fav.svg" data-src-bw="assets/icons/icon-fav.svg" data-src-white="assets/icons/icon-fav-white.svg" alt="Favoritos">
-  </button>
-  <button class="nav-btn" data-target="profile">
-    <img src="assets/icons/icon-profile.svg" data-src-bw="assets/icons/icon-profile.svg" data-src-white="assets/icons/icon-profile-white.svg" alt="Perfil">
-  </button>
+<nav class="navbar">
+    <img src="assets/ui/icon_home.svg">
+    <img src="assets/ui/icon_search.svg">
+    <img src="assets/ui/icon_fav.svg">
+    <img src="assets/ui/icon_profile.svg">
 </nav>
 
 <script src="script.js"></script>
