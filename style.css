@@ -32,7 +32,7 @@ body {
 
 /* Contenedor uniforme para las imágenes de las categorías */
 .card img,
-/*.product img,*/
+.product img,
 .hero img {
   
   height: 190px;   /* Ajusta la altura que quieras para que todas tengan el mismo tamaño */
@@ -121,6 +121,7 @@ body {
   font-size: 14px;
   color: #777;
 }
+
 
 
 
