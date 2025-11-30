@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Categoría</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Categoría · Mi Tienda</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <header class="topbar">
-  <div class="back" onclick="history.back()">←</div>
-  <div class="logo small">Categoría</div>
+  <div class="top-left">
+    <button class="back" onclick="history.back()">←</button>
+    <div class="logo small">Categoría</div>
+  </div>
+  <div class="top-right">
+    <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <img id="category-hero-img" src="img/hero.jpg" alt="Categoría">
-  <div class="hero-text" id="category-hero-text">Productos</div>
-</section>
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <img id="category-hero-img" src="img/hero.jpg" alt="Banner de categoría" />
+    <div class="hero-text" id="category-hero-text">Productos</div>
+  </section>
 
-<h2 class="section-title" id="cat-title">Productos</h2>
+  <h2 class="section-title" id="cat-title">Productos</h2>
 
-<section class="product-list" id="products"></section>
+  <section class="product-list" id="products"></section>
+</main>
+
+<footer class="footer">
+  © <span id="year-2"></span> · Mi Tienda
+</footer>
 
 <script src="script.js"></script>
 </body>
