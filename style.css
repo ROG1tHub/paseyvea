@@ -30,16 +30,16 @@ body {
   cursor: pointer;
 }
 
-/* HERO compartido (index + category) */
+/* HERO igual para index y category */
 .hero {
-  position: relative;
   width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
 /* Contenedor uniforme para las imágenes de las categorías */
 .card img,
-/*.product img,*/
+.product img,
 .hero img {
   
   height: 190px;   /* Ajusta la altura que quieras para que todas tengan el mismo tamaño */
@@ -55,17 +55,19 @@ body {
   object-fit: cover;        /* rellena sin deformar */
   object-position: center;  /* centra la porción recortada */
   border-radius: 0;
+  display: block;
 }
+
 /* Texto sobre el hero (opcional) */
 .hero-text {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 16px;
-  color: white;
-  font-weight: 700;
+  color: #fff;
+  font-weight: bold;
   font-size: 18px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.5);
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
   pointer-events: none; /* para que no interfiera con clics */
 }
 
@@ -101,12 +103,21 @@ body {
   font-size: 16px;
 }
 
+/* Grid de productos */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 15px;
+}
+
 /* PRODUCTS */
 .product {
   background: #fff;
   border: 1px solid #eee;
   border-radius: 12px;
   padding: 10px;
+  text-align: center;
 }
 
 .product img {
@@ -133,6 +144,7 @@ body {
   font-size: 14px;
   color: #777;
 }
+
 
 
 
