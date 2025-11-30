@@ -30,10 +30,7 @@ body {
   cursor: pointer;
 }
 
-.hero img {
-  width: 100%;
-  border-radius: 0;
-}
+
 .hero img {
   height: 260px;
   object-fit: cover;
@@ -74,10 +71,7 @@ body {
   color: inherit;
   border: 1px solid #eee;
 }
-.card img {
-  width: 100%;
-  border-radius: 12px 12px 0 0;
-}
+
 .card h3 {
   padding: 10px;
   margin: 0;
@@ -92,7 +86,6 @@ body {
   padding: 10px;
 }
 .product img {
-  width: 100%;
   border-radius: 10px;
 }
 
@@ -115,6 +108,7 @@ body {
   font-size: 14px;
   color: #777;
 }
+
 
 
 
