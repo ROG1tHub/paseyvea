@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda · Belleza & Hogar</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <header class="topbar">
-  <div class="logo">Mi Tienda</div>
+  <div class="top-left">
+    <div class="logo">Mi Tienda</div>
+  </div>
+  <div class="top-right">
+    <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+    <button class="menu-btn" aria-label="Menú">☰</button>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="img/hero.jpg" alt="Hero banner">
-  <div class="hero-text">Belleza • Fragancias • Hogar</div>
-</section>
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/hero.jpg" alt="Hero banner" />
+    <div class="hero-text">Belleza • Fragancias • Hogar</div>
+  </section>
 
-<h2 class="section-title">Categorías</h2>
+  <h2 class="section-title">Categorías</h2>
 
-<section class="categories">
-  <div class="card" onclick="goToCategory('perfumes')">
-    <img src="img/perfumes.jpg" alt="Perfumes">
-    <span>Perfumes</span>
-  </div>
+  <section class="categories">
+    <div class="card" onclick="goToCategory('perfumes')">
+      <img src="img/perfumes.jpg" alt="Perfumes" />
+      <span>Perfumes</span>
+    </div>
 
-  <div class="card" onclick="goToCategory('cremas')">
-    <img src="img/cremas.jpg" alt="Cremas">
-    <span>Cremas</span>
-  </div>
+    <div class="card" onclick="goToCategory('cremas')">
+      <img src="img/cremas.jpg" alt="Cremas" />
+      <span>Cremas & Cuidado</span>
+    </div>
 
-  <div class="card" onclick="goToCategory('kids')">
-    <img src="img/kids.jpg" alt="Niños">
-    <span>Niños</span>
-  </div>
+    <div class="card" onclick="goToCategory('kids')">
+      <img src="img/kids.jpg" alt="Niños" />
+      <span>Niños</span>
+    </div>
 
-  <div class="card" onclick="goToCategory('hogar')">
-    <img src="img/hogar.jpg" alt="Hogar">
-    <span>Hogar</span>
-  </div>
-</section>
+    <div class="card" onclick="goToCategory('hogar')">
+      <img src="img/hogar.jpg" alt="Hogar" />
+      <span>Hogar</span>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  © <span id="year"></span> · Mi Tienda
+</footer>
 
 <script src="script.js"></script>
 </body>
