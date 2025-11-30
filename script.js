@@ -44,41 +44,42 @@ if (window.location.pathname.includes("category.html")) {
 }
 
 const heroByCategory = {
-  perfumes: { img: "img/perfumes-hero.jpg", text: "Perfumes" },
-  cremas:   { img: "img/cremas-hero.jpg", text: "Cremas & Cuidado" },
-  kids:     { img: "img/kids-hero.jpg", text: "Niños" },
-  hogar:    { img: "img/hogar-hero.jpg", text: "Hogar" },
-  default:  { img: "img/hero.jpg", text: "Belleza • Fragancias • Hogar" }
+  perfumes: { img: "img/perfumes.jpg", text: "Perfumes" },
+  cremas:   { img: "img/cremas.jpg", text: "Cremas & Cuidado" },
+  kids:     { img: "img/kids.jpg", text: "Niños" },
+  hogar:    { img: "img/hogar.jpg", text: "Hogar" },
+  default:  { img: "img/hero.jpg", text: "Productos" }
 };
 
 function loadCategory() {
   const params = new URLSearchParams(window.location.search);
   const cat = params.get("cat");
-  const meta = heroByCategory[cat] || heroByCategory.default;
 
-  // Título sección
-  document.getElementById("cat-title").innerText =
-    (cat ? cat.charAt(0).toUpperCase() + cat.slice(1) : "Productos");
+  const heroMeta = heroByCategory[cat] || heroByCategory.default;
 
-  // Hero dinámico
+  // Cambiar imagen del hero
   const heroImg = document.getElementById("category-hero-img");
   const heroText = document.getElementById("category-hero-text");
-  if (heroImg && heroText) {
-    heroImg.src = meta.img;
-    heroText.innerText = meta.text;
-  }
 
-  // Cargar productos como antes
+  heroImg.src = heroMeta.img;
+  heroText.innerText = heroMeta.text;
+
+  // Título
+  document.getElementById("cat-title").innerText =
+    heroMeta.text;
+
+  // Productos
   const container = document.getElementById("products");
-  container.innerHTML = ""; // limpiar
+  container.innerHTML = "";
+
   if (productsData[cat]) {
-    productsData[cat].forEach(p => {
+    productsData[cat].forEach(prod => {
       const item = document.createElement("div");
       item.className = "product";
       item.innerHTML = `
-        <img src="${p.img}" alt="${p.name}">
-        <h4>${p.name}</h4>
-        <div class="price">${p.price}</div>
+        <img src="${prod.img}" alt="${prod.name}">
+        <h4>${prod.name}</h4>
+        <div class="price">${prod.price}</div>
       `;
       container.appendChild(item);
     });
@@ -88,4 +89,6 @@ function loadCategory() {
 if (window.location.pathname.includes("category.html")) {
   loadCategory();
 }
+
+
 
