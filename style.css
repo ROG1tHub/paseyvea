@@ -30,6 +30,16 @@ body {
   cursor: pointer;
 }
 
+/* Contenedor uniforme para las imágenes de las categorías */
+.card img,
+.product img,
+.hero img {
+  width: 100%;
+  height: 180px;   /* Ajusta la altura que quieras para que todas tengan el mismo tamaño */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
 
 .hero img {
   height: 260px;
@@ -108,6 +118,7 @@ body {
   font-size: 14px;
   color: #777;
 }
+
 
 
 
