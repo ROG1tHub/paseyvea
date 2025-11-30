@@ -6,22 +6,23 @@ function goToCategory(cat) {
 // Datos de ejemplo (colocá tus productos reales)
 const productsData = {
   perfumes: [
-    { name: "Perfume 1", price: "$5000", img: "img/perfumes.jpg" },
-    { name: "Perfume 2", price: "$4500", img: "img/perfumes.jpg" }
+    { name: "Perfume 1", price: "$5000", img: "img/perfume1.jpg" },
+    { name: "Perfume 2", price: "$4500", img: "img/perfume2.jpg" }
   ],
 
   cremas: [
-    { name: "Crema Facial", price: "$3000", img: "img/cremas.jpg" },
-    { name: "Crema Corporal", price: "$3500", img: "img/cremas.jpg" }
+    { name: "Crema Facial", price: "$3000", img: "img/crema1.jpg" },
+    { name: "Crema Corporal", price: "$3500", img: "img/crema2.jpg" }
   ],
 
   kids: [
-    { name: "Colonia Kids", price: "$2500", img: "img/kids.jpg" }
+    { name: "Colonia Kids", price: "$2500", img: "img/kids1.jpg" },
+    { name: "Lunchera", price: "$8500", img: "img/kids2.jpg" }
   ],
 
   hogar: [
-    { name: "Recipiente Plástico", price: "$2000", img: "img/hogar.jpg" },
-    { name: "Organizador Cocina", price: "$2800", img: "img/hogar.jpg" }
+    { name: "Recipiente Plástico", price: "$2000", img: "img/hogar1.jpg" },
+    { name: "Organizador Cocina", price: "$2800", img: "img/hogar2.jpg" }
   ]
 };
 
@@ -67,3 +68,4 @@ function loadCategory() {
 if (window.location.pathname.includes("category.html")) {
   loadCategory();
 }
+
