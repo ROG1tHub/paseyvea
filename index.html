@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pase y vea</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda | Cuidado Personal y Hogar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-    <img src="assets/logo/logo_principal.png" class="logo" alt="Pase y vea logo">
+<header class="topbar">
+  <div class="logo">TU LOGO</div>
+  <div class="menu">☰</div>
 </header>
 
+<section class="hero">
+  <img src="img/hero.jpg" alt="Promoción" />
+  <div class="hero-text">Belleza • Fragancias • Hogar</div>
+</section>
+
+<h2 class="section-title">Categorías</h2>
+
 <section class="categories">
-    <button>Mujer</button>
-    <button>Hombre</button>
-    <button>Unisex</button>
-    <button>Hogar</button>
+
+  <a href="category.html?cat=perfumes" class="card">
+    <img src="img/perfumes.jpg" />
+    <h3>Perfumes</h3>
+  </a>
+
+  <a href="category.html?cat=cremas" class="card">
+    <img src="img/cremas.jpg" />
+    <h3>Cremas & Cuidado</h3>
+  </a>
+
+  <a href="category.html?cat=kids" class="card">
+    <img src="img/kids.jpg" />
+    <h3>Niños</h3>
+  </a>
+
+  <a href="category.html?cat=hogar" class="card">
+    <img src="img/hogar.jpg" />
+    <h3>Hogar</h3>
+  </a>
+
 </section>
 
-<section class="grid">
-    <a href="product.html"><img src="assets/productos/producto1.jpg"></a>
-    <a href="product.html"><img src="assets/productos/producto2.jpg"></a>
-    <a href="product.html"><img src="assets/productos/producto3.jpg"></a>
-    <a href="product.html"><img src="assets/productos/producto4.jpg"></a>
-    <a href="product.html"><img src="assets/productos/producto5.jpg"></a>
-    <a href="product.html"><img src="assets/productos/producto6.jpg"></a>
-</section>
-
-<nav class="navbar">
-    <img src="assets/ui/icon_home.svg">
-    <img src="assets/ui/icon_search.svg">
-    <img src="assets/ui/icon_fav.svg">
-    <img src="assets/ui/icon_profile.svg">
-</nav>
+<footer class="footer">
+  © 2025 - Tu Tienda Online
+</footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
