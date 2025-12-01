@@ -115,40 +115,69 @@ function renderCartItems() {
 closeBtn.onclick = () => modal.style.display = "none";
 window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
-// ====== MODO OSCURO AVON ======
-const toggle = document.getElementById("darkToggle");
-
-// Cargar preferencia
-if (localStorage.getItem("darkMode") === "true") {
-    toggle.checked = true;
-    document.body.classList.add("dark");
-}
-
-// Evento
-toggle.addEventListener("change", () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem("darkMode", toggle.checked);
-});
-
-// === MODO OSCURO ===
+// ====== MODO OSCURO — SISTEMA UNIFICADO ======
 const darkToggle = document.getElementById("darkToggle");
 
-function applyTheme(theme) {
-  document.documentElement.classList.toggle("dark", theme === "dark");
-  darkToggle.checked = theme === "dark";
-}
-
-function toggleTheme() {
-  const newTheme = darkToggle.checked ? "dark" : "light";
-  localStorage.setItem("theme", newTheme);
-  applyTheme(newTheme);
-}
-
-darkToggle.addEventListener("change", toggleTheme);
-
-// iniciar
+// Cargar preferencia guardada
 const savedTheme = localStorage.getItem("theme") || "light";
-applyTheme(savedTheme);
+document.body.classList.toggle("dark", savedTheme === "dark");
+darkToggle.checked = savedTheme === "dark";
+
+// Cambiar modo
+darkToggle.addEventListener("change", () => {
+    const theme = darkToggle.checked ? "dark" : "light";
+    document.body.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+});
+/* ================================
+   MODO OSCURO
+================================= */
+body.dark {
+  background-color: #111;
+  color: #eee;
+}
+
+/* Topbar */
+body.dark .topbar {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Cards */
+body.dark .product-card,
+body.dark .category-card {
+  background-color: #1c1c1c;
+  color: #fff;
+  border-color: #333;
+}
+
+/* Precios */
+body.dark .price {
+  color: #7ad87a;
+}
+
+body.dark .old-price {
+  color: #bbb;
+}
+
+/* Favorito (corazón) */
+body.dark .favorite-btn {
+  color: #fff;
+}
+
+/* Modal */
+body.dark .modal-content {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Navbar / menú */
+body.dark .menu {
+  background-color: #1b1b1b;
+}
+
+
+
 
 
 
