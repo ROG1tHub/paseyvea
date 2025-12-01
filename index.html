@@ -11,18 +11,24 @@
   <div class="top-left">
     <div class="logo">Mi Tienda</div>
   </div>
-  <div class="top-right">
-    <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
-    <button class="menu-btn" aria-label="Menú">☰</button>
-  </div>
-  <div class="darkmode-switch">
-  <input type="checkbox" id="darkToggle">
-  <label for="darkToggle" class="switch">
-    <span class="sun">☀️</span>
-    <span class="moon">🌙</span>
-  </label>
-</div>
 
+  <div class="top-right">
+
+    <!-- 🌙 Nuevo switch modo oscuro (único) -->
+    <div class="darkmode-switch">
+      <input type="checkbox" id="darkToggle">
+      <label for="darkToggle" class="switch">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+      </label>
+    </div>
+
+    <!-- 🛍 Burbuja del carrito (si ya existe en tu HTML) -->
+    <div class="cart-icon" id="open-cart">
+      🛍️ <span id="cart-count">0</span>
+    </div>
+
+  </div>
 </header>
 
 <main>
@@ -64,4 +70,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
