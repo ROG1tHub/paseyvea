@@ -572,4 +572,14 @@ body.dark .close-modal {
 }
 
 
+html.dark {
+  background: #111;
+  color: white;
+}
+
+html.dark .topbar {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
 
