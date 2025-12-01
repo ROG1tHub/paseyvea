@@ -8,57 +8,33 @@
 </head>
 <body>
 
-<!-- ============ HEADER UNIFICADO ============ -->
 <header class="topbar">
-
-  <!-- Volver -->
-  <a href="index.html" class="back-btn" style="font-size: 22px; text-decoration:none; color:var(--accent);">
-    ←
-  </a>
-
-  <!-- Logo -->
+  <a href="index.html" class="back-btn" style="text-decoration:none;color:var(--accent);font-size:22px;">←</a>
   <div class="logo">Mi Tienda</div>
-
-  <!-- Acciones -->
   <div class="top-actions">
-
-    <!-- SWITCH DARK MODE -->
     <div class="darkmode-switch">
-      <input type="checkbox" id="darkToggle">
+      <input type="checkbox" id="darkToggle" />
       <label for="darkToggle" class="switch">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
+        <span class="sun">☀️</span><span class="moon">🌙</span>
       </label>
     </div>
-
-    <!-- CARRITO -->
     <button id="open-cart" class="cart-btn">
-      🛒
-      <span id="cart-bubble" class="cart-bubble">0</span>
+      🛒 <span id="cart-bubble" class="cart-bubble" style="display:none">0</span>
     </button>
-
   </div>
 </header>
 
-
-<!-- ============ CONTENIDO PRINCIPAL ============ -->
 <main>
-
   <h2 id="category-title" class="section-title"></h2>
-
   <div id="product-list" class="product-list"></div>
-
 </main>
 
-
-<!-- ============ MODAL CARRITO ============ -->
-<div id="cart-modal" class="modal">
+<!-- modal (global) -->
+<div id="cart-modal" class="modal" style="display:none">
   <div class="modal-content">
     <span id="close-cart" class="close">&times;</span>
     <h2>Mi Carrito</h2>
-
     <div id="cart-items"></div>
-
     <button class="checkout-btn" id="checkout-btn">Finalizar compra</button>
   </div>
 </div>
