@@ -17,19 +17,39 @@ const products = {
 
   perfumes: [
     { 
-      name: "Perfume Exclusivo", 
-      desc: "Aroma floral elegante para hombres", 
-      price: 12000, 
-      oldPrice: 15000, 
+      name: "Musk", 
+      desc: "Perfume de Hombre Musk+ Air", 
+      price: 14820, 
+      oldPrice: 24700, 
+      discount: 40, 
       img: "img/perfume1.jpg",
       fav: false
     }, 
     { 
-      name: "Aroma Mujer", 
-      desc: "Fragancia fresca y activa", 
-      price: 9000, 
-      oldPrice: null, 
+      name: "300 km/h", 
+      desc: "Perfume para hombre300 KM/H Electric, Eau de Toilette. Contenido: 100 ml.", 
+      price: 19470, 
+      oldPrice: 35400, 
+      discount: 45,
       img: "img/perfume2.jpg",
+      fav: false
+    }, 
+    { 
+      name: "Exclusive", 
+      desc: "Perfume de Hombre Exclusive in Blue, Eau de Toilette. Contenido: 100 ml.", 
+      price: 36400, 
+      oldPrice: 56000, 
+      discount: 35,
+      img: "img/perfume3.jpg",
+      fav: false
+    }, 
+    { 
+      name: "Black Suede", 
+      desc: "Versión Hot de 100 mL diseñada específicamente para hombre.", 
+      price: 32000, 
+      oldPrice: null, 
+      discount: null,
+      img: "img/perfume4.jpg",
       fav: false
     }
   ],
@@ -340,4 +360,5 @@ const products = {
     console.error("[miTienda] Fatal error in script:", err);
   }
 })();
+
 
