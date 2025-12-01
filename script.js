@@ -58,7 +58,7 @@ const products = {
       price: 2850, 
       oldPrice: 3800, 
       discount: 25,
-      img: "img/desodorante7",
+      img: "img/desodorante7.jpg",
       fav: false
     }, 
     { 
@@ -67,7 +67,7 @@ const products = {
       price: 2850, 
       oldPrice: 3800, 
       discount: 25,
-      img: "img/desodorante8",
+      img: "img/desodorante8.jpg",
       fav: false
     }, 
     { 
@@ -76,7 +76,7 @@ const products = {
       price: 2850, 
       oldPrice: 3800, 
       discount: 25,
-      img: "img/desodorante9",
+      img: "img/desodorante9.jpg",
       fav: false
     }, 
     { 
@@ -85,7 +85,7 @@ const products = {
       price: 2850, 
       oldPrice: 3800, 
       discount: 25,
-      img: "img/desodorante10",
+      img: "img/desodorante10.jpg",
       fav: false
     }, 
     { 
@@ -94,7 +94,7 @@ const products = {
       price: 2850, 
       oldPrice: 3800, 
       discount: 25,
-      img: "img/desodorante11",
+      img: "img/desodorante11.jpg",
       fav: false
     }, 
     { 
@@ -103,7 +103,7 @@ const products = {
       price: 2850, 
       oldPrice: 3800, 
       discount: 25,
-      img: "img/desodorante12",
+      img: "img/desodorante12.jpg",
       fav: false
     }
   ],
@@ -414,6 +414,7 @@ const products = {
     console.error("[miTienda] Fatal error in script:", err);
   }
 })();
+
 
 
 
