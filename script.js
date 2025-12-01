@@ -51,6 +51,60 @@ const products = {
       discount: null,
       img: "img/perfume4.jpg",
       fav: false
+    }, 
+    { 
+      name: "Wild Country", 
+      desc: "Desodorante antitranspirante roll-on 50ml.", 
+      price: 2850, 
+      oldPrice: 3800, 
+      discount: 25,
+      img: "img/desodorante7",
+      fav: false
+    }, 
+    { 
+      name: "Musk", 
+      desc: "Desodorante antitranspirante roll-on 50ml.", 
+      price: 2850, 
+      oldPrice: 3800, 
+      discount: 25,
+      img: "img/desodorante8",
+      fav: false
+    }, 
+    { 
+      name: "Black Suede", 
+      desc: "Desodorante Roll on - BLACK SUEDE HOT - 50 mL", 
+      price: 2850, 
+      oldPrice: 3800, 
+      discount: 25,
+      img: "img/desodorante9",
+      fav: false
+    }, 
+    { 
+      name: "Black Suede", 
+      desc: "Desodorante Roll on - BLACK SUEDE SECRET - 50 mL", 
+      price: 2850, 
+      oldPrice: 3800, 
+      discount: 25,
+      img: "img/desodorante10",
+      fav: false
+    }, 
+    { 
+      name: "Black Suede", 
+      desc: "Desodorante Roll on - BLACK SUEDE INTENSE - 50 mL", 
+      price: 2850, 
+      oldPrice: 3800, 
+      discount: 25,
+      img: "img/desodorante11",
+      fav: false
+    }, 
+    { 
+      name: "Legacy", 
+      desc: "Desodorante Roll on fragancia hombre Legacy 50ml", 
+      price: 2850, 
+      oldPrice: 3800, 
+      discount: 25,
+      img: "img/desodorante12",
+      fav: false
     }
   ],
 
@@ -360,5 +414,6 @@ const products = {
     console.error("[miTienda] Fatal error in script:", err);
   }
 })();
+
 
 
