@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- MODAL CARRITO GLOBAL -->
+
+<!-- ============ MODAL CARRITO (GLOBAL) ============ -->
 <div id="cart-modal" class="modal">
   <div class="modal-content">
     <span id="close-cart" class="close">&times;</span>
@@ -19,25 +20,28 @@
   </div>
 </div>
 
+<!-- ============ HEADER / TOPBAR ============ -->
 <header class="topbar">
 
+  <!-- LOGO -->
   <div class="logo">Mi Tienda</div>
 
+  <!-- ACCIONES DERECHA -->
   <div class="top-actions">
 
+    <!-- SWITCH DARK MODE -->
     <div class="darkmode-switch">
-  <input type="checkbox" id="darkToggle">
-  <label for="darkToggle" class="switch">
-    <span class="sun">☀️</span>
-    <span class="moon">🌙</span>
-  </label>
-</div>
+      <input type="checkbox" id="darkToggle">
+      <label for="darkToggle" class="switch">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+      </label>
+    </div>
 
-
-    <!-- Botón del Carrito -->
-    <button id="open-cart" class="cart-btn">
+    <!-- BOTÓN DEL CARRITO -->
+    <button id="open-cart" class="cart-btn" onclick="openCart()">
       🛒
-      <span id="cart-count" class="cart-bubble">0</span>
+      <span id="cart-bubble" class="cart-bubble">0</span>
     </button>
 
   </div>
@@ -45,7 +49,9 @@
 </header>
 
 
+<!-- ============ CONTENIDO PRINCIPAL ============ -->
 <main>
+
   <!-- HERO -->
   <section class="hero">
     <img src="img/hero.jpg" alt="Hero banner" />
@@ -54,6 +60,7 @@
 
   <h2 class="section-title">Categorías</h2>
 
+  <!-- CATEGORÍAS -->
   <section class="categories">
     <div class="card" onclick="goToCategory('perfumes')">
       <img src="img/perfumes.jpg" alt="Perfumes" />
@@ -75,8 +82,10 @@
       <span>Hogar</span>
     </div>
   </section>
+
 </main>
 
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
   © <span id="year"></span> · Mi Tienda
 </footer>
@@ -84,9 +93,5 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
 
 
