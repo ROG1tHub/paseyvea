@@ -129,52 +129,8 @@ darkToggle.addEventListener("change", () => {
     document.body.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
 });
-/* ================================
-   MODO OSCURO
-================================= */
-body.dark {
-  background-color: #111;
-  color: #eee;
-}
 
-/* Topbar */
-body.dark .topbar {
-  background-color: #1a1a1a;
-  color: #fff;
-}
 
-/* Cards */
-body.dark .product-card,
-body.dark .category-card {
-  background-color: #1c1c1c;
-  color: #fff;
-  border-color: #333;
-}
-
-/* Precios */
-body.dark .price {
-  color: #7ad87a;
-}
-
-body.dark .old-price {
-  color: #bbb;
-}
-
-/* Favorito (corazón) */
-body.dark .favorite-btn {
-  color: #fff;
-}
-
-/* Modal */
-body.dark .modal-content {
-  background-color: #222;
-  color: #fff;
-}
-
-/* Navbar / menú */
-body.dark .menu {
-  background-color: #1b1b1b;
-}
 
 
 
