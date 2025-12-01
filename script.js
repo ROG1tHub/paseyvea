@@ -51,6 +51,22 @@ function saveFavorites() {
 function formatPrice(num) {
   return "$ " + Number(num).toLocaleString("es-AR");
 }
+// ------- Dark Mode -------
+const toggle = document.getElementById("darkToggle");
+if (toggle) {
+  // Cargar estado guardado
+  const savedDark = localStorage.getItem("darkmode") === "true";
+  if (savedDark) {
+    document.body.classList.add("dark");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener("change", () => {
+    const isDark = toggle.checked;
+    document.body.classList.toggle("dark", isDark);
+    localStorage.setItem("darkmode", isDark);
+  });
+}
 
 /* ---------- BURBUJA DEL CARRITO (cantidad total) ---------- */
 function updateCartBubble() {
@@ -311,3 +327,4 @@ function flashCartButton() {
   if (!btn) return;
   btn.animate([{ transform: "scale(1)" }, { transform: "scale(1.06)" }, { transform: "scale(1)" }], { duration: 220 });
 }
+
