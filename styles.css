@@ -160,7 +160,7 @@ img { display: block; }
   width: 100%;
   height: 260px;
   object-fit: cover;
-   object-position: 50% 30%; /* Centro horizontal, 30% desde arriba */
+   object-position: 50% 63%; /* Centro horizontal, 63% desde arriba */
 }
 
 .hero-text {
@@ -448,4 +448,5 @@ footer {
     padding: 16px 20px; /* Mantengo 20px en mobile */
   }
 }
+
 
