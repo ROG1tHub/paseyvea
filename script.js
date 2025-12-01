@@ -1,4 +1,8 @@
 
+window.goToCategory = function(cat) {
+  window.location.href = `category.html?cat=${cat}`;
+};
+
  // ====== LISTA DE PRODUCTOS (EJEMPLO) ======
 const products = {
     perfumes: [
@@ -125,4 +129,5 @@ toggle.addEventListener("change", () => {
     document.body.classList.toggle("dark");
     localStorage.setItem("darkMode", toggle.checked);
 });
+
 
