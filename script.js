@@ -1,9 +1,13 @@
-
+/* ======================================================
+   🔗 NAVEGACIÓN A CATEGORÍAS
+====================================================== */
 window.goToCategory = function(cat) {
-  window.location.href = `category.html?cat=${cat}`;
+    window.location.href = `category.html?cat=${cat}`;
 };
 
- // ====== LISTA DE PRODUCTOS (EJEMPLO) ======
+/* ======================================================
+   🛒 BASE DE DATOS SIMPLIFICADA DE PRODUCTOS
+====================================================== */
 const products = {
     perfumes: [
         { name: "Perfume Exclusivo", desc: "Aroma floral elegante", price: 12000, oldPrice: 15000, img: "img/perfumes.jpg", fav: false },
@@ -11,33 +15,41 @@ const products = {
     ],
     cremas: [
         { name: "Sweet Honesty Treasures", desc: "Desodorante Roll-On Sweet Honesty Treasures", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg", fav: false },
-          { name: "Pur Blanca", desc: "Desodorante anti-transpirante roll-on con el mismo aroma del perfume Pur Blanca.", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante2.jpg ", fav: false },
-          { name: "CLov/u", desc: "Desodorante Roll-On Love u", price: 1900, oldPrice: 3800, discount: 50, img: "img/desodorante3.jpg ", fav: false },
-          { name: "Toque De Amor", desc: "Desodorante Antitranspirante Roll-on", price: 2850, oldPrice: 3800, img: "img/desodorante4.jpg", fav: false },
-          { name: "Sweet Honesty", desc: "Desodorante Roll-On Sweet Honesty", price: 2850, oldPrice: 3800, img: "img/desodorante5.jpg", fav: false },
-          { name: "On Duty", desc: "Desodorantes Roll On On Duty Care Minimizador de Vello", price: 3080, oldPrice: 5600,discount: 45, img: "img/desodorante6.jpg", fav: false },
+        { name: "Pur Blanca", desc: "Desodorante roll-on con aroma del perfume Pur Blanca.", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante2.jpg", fav: false },
+        { name: "Love U", desc: "Desodorante Roll-On Love U", price: 1900, oldPrice: 3800, discount: 50, img: "img/desodorante3.jpg", fav: false },
+        { name: "Toque de Amor", desc: "Desodorante Antitranspirante Roll-on", price: 2850, oldPrice: 3800, img: "img/desodorante4.jpg", fav: false },
+        { name: "Sweet Honesty", desc: "Desodorante Roll-On Sweet Honesty", price: 2850, oldPrice: 3800, img: "img/desodorante5.jpg", fav: false },
+        { name: "On Duty", desc: "Desodorante On Duty Care Minimizador de Vello", price: 3080, oldPrice: 5600, discount: 45, img: "img/desodorante6.jpg", fav: false },
     ],
     kids: [
         { name: "Colonia Kids", desc: "Aroma suave para niños", price: 5000, oldPrice: null, img: "img/kids.jpg", fav: false }
     ],
     hogar: [
-        { name: "Organizador Multiuso", desc: "Para cocina o baño", price: 4500, oldPrice: null, img: "img/hogar.jpg", fav: false }
+        { name: "Organizador Multiuso", desc: "Ideal para cocina o baño", price: 4500, oldPrice: null, img: "img/hogar.jpg", fav: false }
     ]
 };
 
-// Detectar categoría
+/* ======================================================
+   📌 DETECTAR CATEGORÍA ACTUAL
+====================================================== */
 const urlParams = new URLSearchParams(window.location.search);
 const currentCategory = urlParams.get("cat");
 
-// Carrito y favoritos
+/* ======================================================
+   🧡 FAVORITOS + 🛒 CARRITO
+====================================================== */
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || {};
 
 updateCartBubble();
 
-// ====== RENDER ======
+/* ======================================================
+   🖼 RENDER DE PRODUCTOS (CATEGORY.HTML)
+====================================================== */
 function renderProducts(category) {
     const container = document.getElementById("product-list");
+    if (!container) return;
+
     container.innerHTML = "";
 
     products[category].forEach((p, index) => {
@@ -46,14 +58,16 @@ function renderProducts(category) {
 
         container.innerHTML += `
             <div class="product-card">
-                <div class="product-image">
-                    <img src="${p.img}" alt="${p.name}">
-                    <button class="fav-btn ${favActive}" onclick="toggleFavorite('${id}')">♥</button>
-                </div>
-        
+
+                ${p.discount ? `<div class="discount-tag">-${p.discount}%</div>` : ""}
+
+                <button class="fav-btn ${favActive}" onclick="toggleFavorite('${id}')">♥</button>
+
+                <img src="${p.img}" alt="${p.name}">
+
                 <h3>${p.name}</h3>
                 <p>${p.desc}</p>
-                
+
                 <div class="price-box">
                     ${p.oldPrice ? `<span class="old-price">$${p.oldPrice}</span>` : ""}
                     <span class="price">$${p.price}</span>
@@ -67,14 +81,18 @@ function renderProducts(category) {
 
 if (currentCategory) renderProducts(currentCategory);
 
-// ====== FAVORITOS ======
+/* ======================================================
+   🧡 FAVORITOS
+====================================================== */
 function toggleFavorite(id) {
     favorites[id] = !favorites[id];
     localStorage.setItem("favorites", JSON.stringify(favorites));
     renderProducts(currentCategory);
 }
 
-// ====== CARRITO ======
+/* ======================================================
+   🛒 CARRITO
+====================================================== */
 function addToCart(id) {
     const [cat, index] = id.split("-");
     const product = products[cat][index];
@@ -89,14 +107,16 @@ function updateCartBubble() {
     if (bubble) bubble.textContent = cart.length;
 }
 
-// ====== MODAL CARRITO ======
+/* ======================================================
+   🛍 MODAL DEL CARRITO
+====================================================== */
 const modal = document.getElementById("cart-modal");
 const closeBtn = document.getElementById("close-cart");
 
-function openCart() {
+window.openCart = function() {
     modal.style.display = "flex";
     renderCartItems();
-}
+};
 
 function renderCartItems() {
     const box = document.getElementById("cart-items");
@@ -112,28 +132,29 @@ function renderCartItems() {
     });
 }
 
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+if (closeBtn) {
+    closeBtn.onclick = () => modal.style.display = "none";
+}
 
-// ====== MODO OSCURO — SISTEMA UNIFICADO ======
+window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+};
+
+/* ======================================================
+   🌙 MODO OSCURO UNIFICADO (SIMPLE + SIN ERRORES)
+====================================================== */
 const darkToggle = document.getElementById("darkToggle");
 
 // Cargar preferencia guardada
-const savedTheme = localStorage.getItem("theme") || "light";
-document.body.classList.toggle("dark", savedTheme === "dark");
-darkToggle.checked = savedTheme === "dark";
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark");
+    if (darkToggle) darkToggle.checked = true;
+}
 
-// Cambiar modo
-darkToggle.addEventListener("change", () => {
-    const theme = darkToggle.checked ? "dark" : "light";
-    document.body.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
-});
-
-
-
-
-
-
-
-
+// Evento del switch
+if (darkToggle) {
+    darkToggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+        localStorage.setItem("darkMode", darkToggle.checked);
+    });
+}
