@@ -130,5 +130,25 @@ toggle.addEventListener("change", () => {
     localStorage.setItem("darkMode", toggle.checked);
 });
 
+// === MODO OSCURO ===
+const darkToggle = document.getElementById("darkToggle");
+
+function applyTheme(theme) {
+  document.documentElement.classList.toggle("dark", theme === "dark");
+  darkToggle.checked = theme === "dark";
+}
+
+function toggleTheme() {
+  const newTheme = darkToggle.checked ? "dark" : "light";
+  localStorage.setItem("theme", newTheme);
+  applyTheme(newTheme);
+}
+
+darkToggle.addEventListener("change", toggleTheme);
+
+// iniciar
+const savedTheme = localStorage.getItem("theme") || "light";
+applyTheme(savedTheme);
+
 
 
