@@ -10,7 +10,7 @@ const products = {
         { name: "Aroma Sport", desc: "Fragancia fresca y activa", price: 9000, oldPrice: null, img: "img/perfume2.jpg", fav: false }
     ],
     cremas: [
-        { name: "Sweet Honesty", desc: "Desodorante Roll-On Sweet Honesty Treasures", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg", fav: false },
+        { name: "Sweet Honesty Treasures", desc: "Desodorante Roll-On Sweet Honesty Treasures", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante1.jpg", fav: false },
           { name: "Pur Blanca", desc: "Desodorante anti-transpirante roll-on con el mismo aroma del perfume Pur Blanca.", price: 2850, oldPrice: 3800, discount: 25, img: "img/desodorante2.jpg ", fav: false },
           { name: "CLov/u", desc: "Desodorante Roll-On Love u", price: 1900, oldPrice: 3800, discount: 50, img: "img/desodorante3.jpg ", fav: false },
           { name: "Toque De Amor", desc: "Desodorante Antitranspirante Roll-on", price: 2850, oldPrice: 3800, img: "img/desodorante4.jpg", fav: false },
@@ -129,5 +129,6 @@ toggle.addEventListener("change", () => {
     document.body.classList.toggle("dark");
     localStorage.setItem("darkMode", toggle.checked);
 });
+
 
 
