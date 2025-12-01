@@ -12,14 +12,15 @@
     <a href="index.html" class="back-btn">←</a>
     <h1 id="category-title"></h1>
 
-    <div class="cart-icon" id="open-cart">
-      🛒
-      <span id="cart-count" class="cart-bubble">0</span>
-    </div>
+    <div id="cart-bubble">0</div>
+<button onclick="openCart()" id="open-cart">🛒</button>
+
   </header>
 
   <main>
     <div id="products-container" class="products-grid"></div>
+    <div id="product-list"></div>
+
   </main>
 
   <!-- MODAL CARRITO -->
@@ -39,3 +40,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
