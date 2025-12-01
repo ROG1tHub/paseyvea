@@ -53,7 +53,7 @@ img { display: block; }
   padding: 12px 50px; /* Cambiado a 50px lateral para más separación */
   background: var(--card);
   border-bottom: 1px solid var(--border);
-  position: sticky;
+  position: sticky; /* Por defecto sticky en desktop */
   top: 0;
   z-index: 100; /* Aumentado para asegurar que esté fijo por encima */
   width: 100%; /* Asegurar ancho completo */
@@ -407,10 +407,11 @@ footer {
   }
 }
 
-/* Ajustes específicos para mobile (header al rotar) */
+/* Ajustes específicos para mobile (header fijo al scroll) */
 @media (max-width: 767px) {
   .topbar {
-    padding: 12px 20px; /* Mantengo 20px en mobile para no exagerar, pero ajusta si quieres 50px */
+    position: fixed; /* Cambiado a fixed en mobile para evitar el "correo" al scroll */
+    padding: 12px 20px; /* Mantengo 20px en mobile para no exagerar */
   }
 
   .categories {
