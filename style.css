@@ -371,5 +371,86 @@ body{
   font-size: 1rem;
 }
 
+/* Switch AVON */
+.darkmode-switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.switch {
+  width: 55px;
+  height: 28px;
+  background: #e6b3ff;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;
+  transition: 0.3s ease;
+}
+
+.switch span {
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.switch::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  transition: 0.3s ease;
+}
+
+/* Toggle ON */
+#darkToggle:checked + .switch {
+  background: #4b1b65;
+}
+
+#darkToggle:checked + .switch::after {
+  left: 29px;
+}
+
+/* MODO OSCURO PROFESIONAL */
+body.dark {
+  background: #1a1a1a;
+  color: #f8f8f8;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark header {
+  background: #2b0f3a;
+}
+
+body.dark .product-card {
+  background: #2a2a2a;
+  border: 1px solid #444;
+}
+
+body.dark .add-btn {
+  background: #d77aff;
+  color: #1a1a1a;
+}
+
+body.dark .cart-item {
+  border-color: #555;
+}
+
+body.dark .modal {
+  background: #2d2d2d;
+  color: white;
+}
+
+body.dark .close-modal {
+  color: white;
+}
+
 
 
