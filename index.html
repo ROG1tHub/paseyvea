@@ -43,23 +43,27 @@
   <h2 class="section-title">Categorías</h2>
 
   <section class="categories">
-    <div class="card" onclick="goToCategory('perfumes')">
-      <img src="img/perfumes.jpg" alt="Perfumes" />
-      <span>Perfumes</span>
-    </div>
-    <div class="card" onclick="goToCategory('cremas')">
-      <img src="img/cremas.jpg" alt="Cremas" />
-      <span>Cremas & Cuidado</span>
-    </div>
-    <div class="card" onclick="goToCategory('kids')">
-      <img src="img/kids.jpg" alt="Niños" />
-      <span>Niños</span>
-    </div>
-    <div class="card" onclick="goToCategory('hogar')">
-      <img src="img/hogar.jpg" alt="Hogar" />
-      <span>Hogar</span>
-    </div>
-  </section>
+  <div class="card" onclick="goToCategory('hombre')">
+    <img src="img/perfumes.jpg" alt="Hombre" />
+    <span>Hombre</span>
+  </div>
+
+  <div class="card" onclick="goToCategory('mujer')">
+    <img src="img/cremas.jpg" alt="Mujer" />
+    <span>Mujer</span>
+  </div>
+
+  <div class="card" onclick="goToCategory('cuidado')">
+    <img src="img/kids.jpg" alt="Cuidado personal" />
+    <span>Cuidado Personal</span>
+  </div>
+
+  <div class="card" onclick="goToCategory('hogarestilo')">
+    <img src="img/hogar.jpg" alt="Hogar y estilo" />
+    <span>Hogar & Estilo</span>
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">© <span id="year"></span> · Mi Tienda</footer>
@@ -70,4 +74,5 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
 
