@@ -8,36 +8,61 @@
 </head>
 <body>
 
-  <header class="header">
-    <a href="index.html" class="back-btn">←</a>
-    <h1 id="category-title"></h1>
+<!-- ============ HEADER UNIFICADO ============ -->
+<header class="topbar">
 
-    <div id="cart-bubble">0</div>
-<button onclick="openCart()" id="open-cart">🛒</button>
+  <!-- Botón volver -->
+  <a href="index.html" class="back-btn" style="font-size: 22px; text-decoration:none;">←</a>
 
-  </header>
+  <!-- Logo -->
+  <div class="logo">Mi Tienda</div>
 
-  <main>
-    <div id="products-container" class="products-grid"></div>
-    <div id="product-list"></div>
+  <!-- Acciones derecha -->
+  <div class="top-actions">
 
-  </main>
-
-  <!-- MODAL CARRITO -->
-  <div id="cart-modal" class="modal">
-    <div class="modal-content">
-      <span id="close-cart" class="close">&times;</span>
-      <h2>Mi Bolsa</h2>
-
-      <div id="cart-items"></div>
-
-      <button id="checkout-btn" class="checkout-btn">
-        Comprar por WhatsApp
-      </button>
+    <!-- SWITCH DARK MODE -->
+    <div class="darkmode-switch">
+      <input type="checkbox" id="darkToggle">
+      <label for="darkToggle" class="switch">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+      </label>
     </div>
+
+    <!-- CARRITO -->
+    <button id="open-cart" class="cart-btn" onclick="openCart()">
+      🛒
+      <span id="cart-bubble" class="cart-bubble">0</span>
+    </button>
+
   </div>
 
-  <script src="script.js"></script>
+</header>
+
+
+<!-- ============ CONTENIDO PRINCIPAL ============ -->
+<main>
+
+  <h2 id="category-title" class="section-title"></h2>
+
+  <div id="product-list" class="product-list"></div>
+
+</main>
+
+
+<!-- ============ MODAL CARRITO ============ -->
+<div id="cart-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-cart" class="close">&times;</span>
+    <h2>Mi Carrito</h2>
+
+    <div id="cart-items"></div>
+
+    <button class="checkout-btn">Finalizar compra</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
-
