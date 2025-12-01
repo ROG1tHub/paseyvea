@@ -65,7 +65,9 @@ function renderProducts(category) {
 
                 <button class="fav-btn ${favActive}" onclick="toggleFavorite('${id}')">♥</button>
 
+                <div class="img-wrapper">
                 <img src="${p.img}" alt="${p.name}">
+                </div>
 
                 <h3>${p.name}</h3>
                 <p>${p.desc}</p>
@@ -160,4 +162,5 @@ if (darkToggle) {
         localStorage.setItem("darkMode", darkToggle.checked);
     });
 }
+
 
