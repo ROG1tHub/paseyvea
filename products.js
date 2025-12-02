@@ -40,6 +40,9 @@ const products = {
      { name: "Far Away", desc: "Loción perfumada para el cuerpo Far Away Shine 90ml", price: 5460, oldPrice: 7800, discount: 30, img: "img/colonia7.jpg" },
      { name: "Far Away", desc: "Perfume de Mujer Purse Spray 15ml", price: 10080, oldPrice: 16800, discount: 40, img: "img/colonia8.jpg" },
      { name: "Far Away", desc: "Eau de parfum Far Away Shine 50ml", price: 32220, oldPrice: 53700, discount: 40, img: "img/colonia9.jpg" },
+       { name: "Lov/u Date Night", desc: "Perfume para mujer Lov u Date Night 50ml", price: 28200, oldPrice: 47000, discount: 40, img: "img/colonia10.jpg" },
+       { name: "Lov/u Together", desc: "Perfume de mujer Lov u Together 50ml", price: 30550, oldPrice: 47000, discount: 35, img: "img/colonia11.jpg" },
+       { name: "Far Away Beyond", desc: "Perfume de Mujer Far Away Beyond 50ml", price: 32220, oldPrice: 53700, discount: 40, img: "img/colonia12.jpg" },
   ],
 
   cuidado: [
@@ -59,6 +62,7 @@ const products = {
     { name: "Dispenser", desc: "Jabón líquido", price: 4500, img: "img/hogar2.jpg" }
   ]
 };
+
 
 
 
