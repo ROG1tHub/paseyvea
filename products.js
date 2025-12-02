@@ -55,6 +55,7 @@ const products = {
      { name: "Avon Care", desc: "Loción Corporal Frutos Rojos. 400ml", price: 9500, oldPrice: null, discount: null, img: "img/cuidado7.jpg" },
      { name: "Avon Care Sun+", desc: "Protector Solar 2 en 1 Rostro y Cuerpo FPS 50. 250g", price: 28125, oldPrice: 37500, discount: 25, img: "img/cuidado8.jpg" },
      { name: "Avon Care", desc: "Loción Corporal Palta. 400ml", price: 9500, oldPrice: null, discount: null, img: "img/cuidado9.jpg" },
+     { name: "Encanto by Avon", desc: "Pack x 4 unidades de jabón cremoso, 80g x unidad", price: 6000, oldPrice: null, discount: null, img: "img/cuidado10.jpg" },
   ],
 
   hogarestilo: [
@@ -62,6 +63,7 @@ const products = {
     { name: "Dispenser", desc: "Jabón líquido", price: 4500, img: "img/hogar2.jpg" }
   ]
 };
+
 
 
 
